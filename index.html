@@ -4,7 +4,12 @@
 <h1>Hello Word</h1>
 <p>I'm hosted with GitHub Pages.</p>
 
-<script type="text/javascript">
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<!-- <script type="text/javascript">
 $.get('Pokedexv1.csv', function(data) {
 var build = '<table border="1" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">\n';
 var head = data.split("\n");
@@ -18,6 +23,6 @@ build += "<tr><td>" + head[i].split("\n") + "</td></tr>";
 build += "</table>";
 $('#wrap').append(build);
 });
-</script>
+</script> -->
 </body>
 </html>
