@@ -4,56 +4,15 @@
 <meta charset="utf-8">
 <title>Pkmdb</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$.get('https://raw.githubusercontent.com/A-d-i-t-y-a-2-5/pkmdb/main/Pokedexv1.csv', function(data) {
-
-    var html = '<table border="1" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">\n';
-    var rows = data.split("\n");
-    var cols = rows[0].split(",");
-
-    html += "<tr>";
-
-    for (var i = 0; i < cols.length; i++)
-    {
-        html += "<th>" + cols[i] + "</th>";
-    }
-
-    html += "</tr>";
-
-    for (var i = 1; i < rows.length - 1; i++) 
-    {
-        html += "<tr>";
-        for (var j = 0; j < cols.length; j++) 
-        {
-            html += "<td>" + rows[i].split(",")[j] + "</td>";
-        }
-        html += "</tr>";
-    }
-
-    html += "</table>";
-    $('#container').append(html);
-});
-</script>
+<script src="js/function.js"></script>
 </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+
+<input id="myInput" type="text" placeholder="Search..." style="margin: auto;display: block;">
+<br><br>
 <div id="container"></div>
 
-<!-- <script type="text/javascript">
-$.get('Pokedexv1.csv', function(data) {
-var build = '<table border="1" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">\n';
-var head = data.split("\n");
-
-for(var i=0;i<1;i++){
-build += "<tr><th>" + head[i] + "</th></tr>";
-for(var i=1;i<head.length;i++){
-build += "<tr><td>" + head[i].split("\n") + "</td></tr>";
-}
-}
-build += "</table>";
-$('#wrap').append(build);
-});
-</script> -->
 </body>
 </html>
