@@ -55,8 +55,15 @@ $.get('https://raw.githubusercontent.com/A-d-i-t-y-a-2-5/pkmdb/main/Pokedexv1.cs
     $('#myInput').keyup(function(){
         var value = $(this).val().toLowerCase();
         $('tr:gt(0)').filter(function(){
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $(this).toggle($(this).children('td:eq(1)').text().toLowerCase().indexOf(value) > -1)
         });
     });
+
+    $('option').click(function(){
+        var value = $(this).text();
+        $('tr:gt(0)').filter(function(){
+            $(this).toggle($(this).children('td:eq(11)').text() == value);
+        });
+    })
 
 });
