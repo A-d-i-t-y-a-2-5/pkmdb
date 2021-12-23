@@ -1,0 +1,37 @@
+body
+{
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1
+{
+    text-align: center;
+}
+
+input[type="text"]
+{
+    font-family: 'Work Sans', sans-serif;
+}
+
+::placeholder
+{
+    font-family: 'Work Sans', sans-serif;
+}
+
+table
+{
+    border-collapse:collapse;
+    width: 100%;
+}
+
+table th, table td
+{
+    border: 1px solid #aaa;
+    padding: 4px;
+
+}
+
+th
+{
+    cursor: pointer;
+}

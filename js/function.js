@@ -1,7 +1,7 @@
 $(document).ready(function(){
 $.get('https://raw.githubusercontent.com/A-d-i-t-y-a-2-5/pkmdb/main/Pokedexv1.csv', function(data) {
 
-    var html = '<table border="1" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">\n';
+    var html = '<table>\n';
     var rows = data.split("\n");
     var cols = rows[0].split(",");
 
